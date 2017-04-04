@@ -30,6 +30,7 @@ public class StorageThread implements Runnable {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
+
             //read store what's in the buffer in the database
             // I made a change
             //
