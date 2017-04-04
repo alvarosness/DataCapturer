@@ -16,11 +16,7 @@ public class Data {
     private double yRot;
     private double zRot;
 
-    /**
-     * Initializes the {@linkplain muri.iupui.myapplication.Data#xAcc}, {@linkplain muri.iupui.myapplication.Data#yAcc},
-     * {@linkplain muri.iupui.myapplication.Data#zAcc}, {@linkplain muri.iupui.myapplication.Data#xRot},
-     * {@linkplain muri.iupui.myapplication.Data#yRot} and {@linkplain muri.iupui.myapplication.Data#zRot} to 0.
-     */
+
 
     public Data(){
         this.xAcc = 0;
@@ -125,11 +121,12 @@ public class Data {
         this.zRot = zRot;
     }
 
-    /**
-     * @return string representation of {@linkplain muri.iupui.myapplication.Data}
-     */
     public String toString(){
         return "x acc: " + xAcc + " y acc: " + yAcc + " z acc: " + zAcc + " x rot: " + xRot + " y rot: " + yRot + " z rot: " + zRot;
+    }
+
+    public double[] getArray(){
+        return new double[]{xAcc, yAcc, zAcc, xRot, yRot, zRot};
     }
 }
 

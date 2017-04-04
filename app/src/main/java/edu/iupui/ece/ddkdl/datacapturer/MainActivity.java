@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     private TextView status;
     private Button restart;
     public Bundle tempBundle;
+    private StorageThread storageThread;
     private static int SAMPLING_PERIOD = 10;
     long lastSaved = System.currentTimeMillis();
 
@@ -94,6 +95,10 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
                 }
             }
         });
+
+        storageThread = new StorageThread( ,this);
+
+        storageThread.setStoring(true);
     }
 
     @Override

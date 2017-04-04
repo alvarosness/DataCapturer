@@ -6,6 +6,8 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
+import static java.lang.System.currentTimeMillis;
+
 /**
  * Created by Software Development on 4/3/2017.
  */
@@ -30,15 +32,15 @@ public class StorageThread implements Runnable {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-
             //read store what's in the buffer in the database
-            // I made a change
-            //
+            store();
         }
 
     }
 
     public synchronized void store(){
+        long timetag = System.currentTimeMillis();
+        database.InsertData(buffer[0], buffer[1], buffer[2], buffer[3], buffer[4], buffer[5], timetag+"");
 
     }
 
